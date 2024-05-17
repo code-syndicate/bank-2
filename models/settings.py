@@ -3,7 +3,7 @@ from pydantic import BaseSettings, HttpUrl, AnyUrl
 
 class Settings(BaseSettings):
     debug:  bool = True
-    app_name:  str = "Lead Bank"
+    app_name:  str = "West Valley Bank"
     app_id: str = "lead-bank"
     db_name = "WestValleyBank"
     allowed_origins: list[HttpUrl] = ["http://127.0.0.1:7004"]
@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     mail_server:  str = "https://mail.com"
     mail_starttls: bool = False
     mail_ssl_tls:  bool = True
-    mail_display_name: str = "Lead Bank"
+    mail_display_name: str = "West Valley Bank"
     mail_domain:  str = "https://mail.com"
     mail_domain_username:  str = "admin"
     totp_length: int = 6
