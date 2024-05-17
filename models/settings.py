@@ -5,16 +5,16 @@ class Settings(BaseSettings):
     debug:  bool = True
     app_name:  str = "Lead Bank"
     app_id: str = "lead-bank"
-    db_name = "LeadBank"
+    db_name = "WestValleyBank"
     allowed_origins: list[HttpUrl] = ["http://127.0.0.1:7004"]
     base_url: str = "http://localhost:8002"
     db_url: AnyUrl = "mongodb://localhost:4000"
     db_username: str = "default"
     db_password: str = "root"
     password_salt: str = "iamasalt"
-    mail_username: str = "LeadBank"
+    mail_username: str = "WestValleyBank"
     mail_password: str = "mail_pass"
-    mail_from: str = "leadbank@leadbank.com"
+    mail_from: str = "WestValleyBank@WestValleyBank.com"
     mail_port: int = 587
     mail_server:  str = "https://mail.com"
     mail_starttls: bool = False
@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "jwtsecretkey"
     jwt_access_token_expiration_hours: int = 1
     per_page: int = 5
-    session_cookie_name: str = "lead_bank_session"
+    session_cookie_name: str = "west_valley_bank_session"
 
     class Config:
         env_file = ".env"
