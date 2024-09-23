@@ -185,7 +185,7 @@ async def overview(request: Request, auth:  UserDBModel = Depends(enforce_is_adm
 
     if view == "transfers":
         page = min(max_tx_pages, page)
-        start = (settings.per_page * page) - settings.per_page
+        start = max( (settings.per_page * page) - settings.per_page, 0)
         stop = start + settings.per_page
 
     # get all users
